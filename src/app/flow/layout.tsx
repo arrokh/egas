@@ -1,10 +1,11 @@
 "use client";
 
+import KBarInternalProvider from "@/components/core/KBarInternalProvider";
 import { AppShell, Burger, Group, UnstyledButton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
-import classes from "./layout.module.css";
 import Link from "next/link";
+import classes from "./layout.module.css";
 
 export default function RootLayout({
 	children,
@@ -43,8 +44,9 @@ export default function RootLayout({
 			</AppShell.Header>
 
 			<AppShell.Navbar p="md"></AppShell.Navbar>
-
-			<AppShell.Main>{children}</AppShell.Main>
+			<AppShell.Main>
+				<KBarInternalProvider>{children}</KBarInternalProvider>
+			</AppShell.Main>
 		</AppShell>
 	);
 }
