@@ -1,3 +1,9 @@
+import { Center } from "@mantine/core";
+
 export default function Home() {
-	return <>Welcome to EGAS</>;
+	return (
+		<Center>
+			<>Welcome to egas</>
+		</Center>
+	);
 }

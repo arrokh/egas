@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Title } from "@mantine/core";
+import { Button, Center, Flex, Title } from "@mantine/core";
 import Link from "next/link";
 
 export default function Home() {

@@ -2,6 +2,7 @@ import "@mantine/core/styles.css";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
+import KBarInternalProvider from "@/components/core/KBarInternalProvider";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -21,7 +22,9 @@ export default function RootLayout({
 				<ColorSchemeScript />
 			</head>
 			<body>
-				<MantineProvider>{children}</MantineProvider>
+				<MantineProvider>
+					<KBarInternalProvider>{children}</KBarInternalProvider>
+				</MantineProvider>
 			</body>
 		</html>
 	);
